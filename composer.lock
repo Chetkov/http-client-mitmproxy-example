@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f962eb05bc17befaf7ca8741b932ca36",
+    "content-hash": "f72c314fdc09b8032ba5a34e020304f6",
     "packages": [
         {
             "name": "brick/math",
@@ -5380,16 +5380,16 @@
         },
         {
             "name": "v.chetkov/http-client-mitmproxy",
-            "version": "v0.0.5",
+            "version": "v0.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chetkov/http-client-mitmproxy.git",
-                "reference": "207cbe31572b51c7b85c5bc4ab74b57d2e82d350"
+                "reference": "a1379d5d628ea3b986a609223c616957549f10c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chetkov/http-client-mitmproxy/zipball/207cbe31572b51c7b85c5bc4ab74b57d2e82d350",
-                "reference": "207cbe31572b51c7b85c5bc4ab74b57d2e82d350",
+                "url": "https://api.github.com/repos/Chetkov/http-client-mitmproxy/zipball/a1379d5d628ea3b986a609223c616957549f10c6",
+                "reference": "a1379d5d628ea3b986a609223c616957549f10c6",
                 "shasum": ""
             },
             "require": {
@@ -5426,9 +5426,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Chetkov/http-client-mitmproxy/issues",
-                "source": "https://github.com/Chetkov/http-client-mitmproxy/tree/v0.0.5"
+                "source": "https://github.com/Chetkov/http-client-mitmproxy/tree/v0.0.6"
             },
-            "time": "2023-02-17T17:01:51+00:00"
+            "time": "2023-02-19T11:29:04+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

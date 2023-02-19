@@ -21,14 +21,11 @@ class CurrencyRatesController extends Controller
      */
     public function getCurrencyRate(string $code, CurrencyRatesProvider $provider, ValuteFormatter $formatter): array
     {
-        foreach ($provider->getCurrencyRates() as $valute) {
-            if ($valute->charCode === $code) {
-                return $formatter->format($valute);
-            }
-        }
+        $valute = $provider->getCurrencyRate(new \DateTimeImmutable(), $code);
 
-        return [];
+        return $valute ? $formatter->format($valute) : [];
     }
+
 
     /**
      * @param CurrencyRatesProvider $provider
@@ -40,6 +37,6 @@ class CurrencyRatesController extends Controller
      */
     public function getCurrencyRates(CurrencyRatesProvider $provider, ValuteFormatter $formatter): array
     {
-        return $formatter->formatMany(...$provider->getCurrencyRates());
+        return $formatter->formatMany(...$provider->getCurrencyRates(new \DateTimeImmutable()));
     }
 }

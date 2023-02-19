@@ -19,3 +19,5 @@ $router->get('/', function () use ($router) {
 
 $router->get('currency-rates/{code}', 'CurrencyRatesController@getCurrencyRate');
 $router->get('currency-rates', 'CurrencyRatesController@getCurrencyRates');
+
+$router->get('calculate', 'CalculatorController@calculate');

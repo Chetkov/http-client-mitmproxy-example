@@ -20,9 +20,9 @@ class CurrencyRatesProvider
      *
      * @throws ClientExceptionInterface
      */
-    public function getCurrencyRates(): array
+    public function getCurrencyRates(\DateTimeInterface $dateTime): array
     {
-        $request = new Request('GET', 'https://cbr.ru/scripts/XML_daily.asp?date_req=' . date('d/m/Y'));
+        $request = new Request('GET', 'https://cbr.ru/scripts/XML_daily.asp?date_req=' . $dateTime->format('d/m/Y'));
 
         $response = $this->httpClient->sendRequest($request);
 
@@ -42,5 +42,24 @@ class CurrencyRatesProvider
         }
 
         return $result;
+    }
+
+    /**
+     * @param \DateTimeInterface $dateTime
+     * @param string $code
+     *
+     * @return ValuteDTO|null
+     *
+     * @throws ClientExceptionInterface
+     */
+    public function getCurrencyRate(\DateTimeInterface $dateTime, string $code): ?ValuteDTO
+    {
+        foreach ($this->getCurrencyRates($dateTime) as $valute) {
+            if ($valute->charCode === $code) {
+                return $valute;
+            }
+        }
+
+        return null;
     }
 }
