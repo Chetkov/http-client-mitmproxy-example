@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "906470743263818c21717e41e2bf9d9f",
+    "content-hash": "f962eb05bc17befaf7ca8741b932ca36",
     "packages": [
         {
             "name": "brick/math",
@@ -5379,6 +5379,58 @@
             "time": "2023-01-20T17:45:48+00:00"
         },
         {
+            "name": "v.chetkov/http-client-mitmproxy",
+            "version": "v0.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Chetkov/http-client-mitmproxy.git",
+                "reference": "207cbe31572b51c7b85c5bc4ab74b57d2e82d350"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Chetkov/http-client-mitmproxy/zipball/207cbe31572b51c7b85c5bc4ab74b57d2e82d350",
+                "reference": "207cbe31572b51c7b85c5bc4ab74b57d2e82d350",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "ext-json": "*",
+                "ext-pcntl": "*",
+                "ext-readline": "*",
+                "ext-redis": "*",
+                "ext-yaml": "*",
+                "psr/http-client": "^1.0",
+                "symfony/console": "^5||^6.2"
+            },
+            "bin": [
+                "bin/mitm-proxy"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "constants.php"
+                ],
+                "psr-4": {
+                    "Chetkov\\HttpClientMitmproxy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Valeriy Chetkov",
+                    "email": "chetkov.valeriy@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/Chetkov/http-client-mitmproxy/issues",
+                "source": "https://github.com/Chetkov/http-client-mitmproxy/tree/v0.0.5"
+            },
+            "time": "2023-02-17T17:01:51+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.5.0",
             "source": {
@@ -7524,7 +7576,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "ext-redis": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"

@@ -1,7 +1,9 @@
-/vendor
 /.idea
+/vendor
+/sandbox
+/storage
+/temp
 Homestead.json
 Homestead.yaml
 .env
 .phpunit.result.cache
-/storage
